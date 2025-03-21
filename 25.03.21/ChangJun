@@ -1,0 +1,24 @@
+# 약수 구하기!
+
+main() {
+  Measure measure = Measure(4);
+  measure.measurePrint();
+}
+
+class Measure {
+  //property
+  late int num1;
+  //constructor
+  Measure(num1) : this.num1 = num1;
+
+  //method
+  measurePrint() {
+    List<int> numList = [];
+    for (int i = 1; i <= num1; i++) {
+      if (num1 % i == 0) {
+        numList.add(i);
+      }
+    }
+    print("$num 의 약수는 $numList 입니다.");
+  }
+}
